@@ -21,9 +21,8 @@ namespace RegistroDetalle
         private void personasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RegisPersona P = new RegisPersona();
-          
-            P.Show();
-        }
+
+            P.Show();        }
 
         private void toolStripLabel1_Click(object sender, EventArgs e)
         {
