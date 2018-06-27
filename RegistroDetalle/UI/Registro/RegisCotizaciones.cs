@@ -191,7 +191,7 @@ namespace RegistroDetalle.UI.Registro
 
             if (string.IsNullOrEmpty(ImporteTextbox.Text))
             {
-                MessageBox.Show("Importe esta vacio , Llene cantidad", "Validacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Importe esta vacio , Llene cantidad ", "Validacion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
