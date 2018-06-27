@@ -103,18 +103,18 @@ namespace RegistroDetalle.BLL
 
         public static List<Articulos> GetList(Expression<Func<Articulos, bool>> expression)
         {
-            List<Articulos> Articulos = new List<Articulos>();
+            List<Articulos> articulos = new List<Articulos>();
             Contexto contexto = new Contexto();
             try
             {
-                Articulos = contexto.Articulos.Where(expression).ToList();
+                articulos = contexto.Articulos.Where(expression).ToList();
                 contexto.Dispose();
             }
             catch (Exception)
             {
                 throw;
             }
-            return Articulos;
+            return articulos;
         }
     }
 }

@@ -46,15 +46,15 @@ namespace RegistroDetalle.UI.Registro
         private Articulos LlenarClase()
         {
 
-            Articulos art = new Articulos();
+            Articulos articulo= new Articulos();
 
-            art.ArticuloID = Convert.ToInt32(IDnumericUpDown.Value);
-            art.Descripcion = DescripciontextBox.Text;
-            art.Precio = Convert.ToInt32(PrecionumericUpDown.Value);
-            art.FehaVencimiento = VencimientodateTimePicker.Value;
-            art.CantidadCotizada = Convert.ToInt32(CantidadCotizadatextBox.Text);
+            articulo.ArticuloID = Convert.ToInt32(IDnumericUpDown.Value);
+            articulo.Descripcion = DescripciontextBox.Text;
+            articulo.Precio = Convert.ToInt32(PrecionumericUpDown.Value);
+            articulo.FehaVencimiento = VencimientodateTimePicker.Value;
+            articulo.CantidadCotizada = Convert.ToInt32(CantidadCotizadatextBox.Text);
 
-            return art;
+            return articulo;
         }
         private bool Validar(int validar)
         {

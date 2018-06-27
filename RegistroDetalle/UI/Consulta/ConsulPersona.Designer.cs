@@ -32,13 +32,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.HastadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.DesdedateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.ConsulPersonasdataGridView = new System.Windows.Forms.DataGridView();
             this.Buscar1button = new System.Windows.Forms.Button();
             this.CriteriotextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.FiltrarcomboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ConsulPersonasdataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -74,15 +74,15 @@
             this.DesdedateTimePicker.Size = new System.Drawing.Size(200, 20);
             this.DesdedateTimePicker.TabIndex = 16;
             // 
-            // dataGridView
+            // ConsulPersonasdataGridView
             // 
-            this.dataGridView.AllowUserToDeleteRows = false;
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(61, 132);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.ReadOnly = true;
-            this.dataGridView.Size = new System.Drawing.Size(616, 308);
-            this.dataGridView.TabIndex = 15;
+            this.ConsulPersonasdataGridView.AllowUserToDeleteRows = false;
+            this.ConsulPersonasdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ConsulPersonasdataGridView.Location = new System.Drawing.Point(61, 132);
+            this.ConsulPersonasdataGridView.Name = "ConsulPersonasdataGridView";
+            this.ConsulPersonasdataGridView.ReadOnly = true;
+            this.ConsulPersonasdataGridView.Size = new System.Drawing.Size(616, 308);
+            this.ConsulPersonasdataGridView.TabIndex = 15;
             // 
             // Buscar1button
             // 
@@ -94,6 +94,7 @@
             this.Buscar1button.Text = "Buscar";
             this.Buscar1button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Buscar1button.UseVisualStyleBackColor = true;
+            this.Buscar1button.Click += new System.EventHandler(this.Buscar1button_Click);
             // 
             // CriteriotextBox
             // 
@@ -116,13 +117,17 @@
             this.FiltrarcomboBox.FormattingEnabled = true;
             this.FiltrarcomboBox.Items.AddRange(new object[] {
             "ID",
-            "Precio",
+            "Nombre",
             "Fecha",
+            "Cedula",
+            "Direccion",
+            "Telefono",
             "Todo"});
             this.FiltrarcomboBox.Location = new System.Drawing.Point(77, 23);
             this.FiltrarcomboBox.Name = "FiltrarcomboBox";
             this.FiltrarcomboBox.Size = new System.Drawing.Size(121, 21);
             this.FiltrarcomboBox.TabIndex = 11;
+            this.FiltrarcomboBox.SelectedIndexChanged += new System.EventHandler(this.FiltrarcomboBox_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -142,7 +147,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.HastadateTimePicker);
             this.Controls.Add(this.DesdedateTimePicker);
-            this.Controls.Add(this.dataGridView);
+            this.Controls.Add(this.ConsulPersonasdataGridView);
             this.Controls.Add(this.Buscar1button);
             this.Controls.Add(this.CriteriotextBox);
             this.Controls.Add(this.label2);
@@ -150,7 +155,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ConsulPersona";
             this.Text = "ConsulPersona";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ConsulPersonasdataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,7 +167,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker HastadateTimePicker;
         private System.Windows.Forms.DateTimePicker DesdedateTimePicker;
-        private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.DataGridView ConsulPersonasdataGridView;
         private System.Windows.Forms.Button Buscar1button;
         private System.Windows.Forms.TextBox CriteriotextBox;
         private System.Windows.Forms.Label label2;
