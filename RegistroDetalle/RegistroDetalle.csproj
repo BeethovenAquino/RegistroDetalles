@@ -141,6 +141,13 @@
   <ItemGroup />
   <ItemGroup>
     <None Include="Resources\Fondo.jpg" />
+    <Content Include="DAL\Cotizaciones.sql" />
+    <None Include="Resources\buscar.png" />
+    <None Include="Resources\save_32.png" />
+    <None Include="Resources\new_32.png" />
+    <None Include="Resources\borrar_32.png" />
+    <None Include="Resources\Remover_32.png" />
+    <None Include="Resources\Add_32.png" />
     <Content Include="Script\SQLQuery.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

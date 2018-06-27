@@ -73,7 +73,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(51, 56);
+            this.label2.Location = new System.Drawing.Point(44, 87);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 1;
@@ -82,7 +82,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(46, 82);
+            this.label3.Location = new System.Drawing.Point(39, 113);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 13);
             this.label3.TabIndex = 2;
@@ -91,7 +91,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(182, 82);
+            this.label4.Location = new System.Drawing.Point(175, 113);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 3;
@@ -100,7 +100,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(319, 82);
+            this.label5.Location = new System.Drawing.Point(312, 113);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 13);
             this.label5.TabIndex = 4;
@@ -109,7 +109,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(455, 82);
+            this.label6.Location = new System.Drawing.Point(448, 113);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(42, 13);
             this.label6.TabIndex = 5;
@@ -127,7 +127,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(612, 386);
+            this.label8.Location = new System.Drawing.Point(600, 474);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(31, 13);
             this.label8.TabIndex = 7;
@@ -150,7 +150,7 @@
             // ArticulocomboBox
             // 
             this.ArticulocomboBox.FormattingEnabled = true;
-            this.ArticulocomboBox.Location = new System.Drawing.Point(19, 98);
+            this.ArticulocomboBox.Location = new System.Drawing.Point(12, 129);
             this.ArticulocomboBox.Name = "ArticulocomboBox";
             this.ArticulocomboBox.Size = new System.Drawing.Size(121, 21);
             this.ArticulocomboBox.TabIndex = 11;
@@ -158,32 +158,34 @@
             // 
             // PreciotextBox
             // 
-            this.PreciotextBox.Location = new System.Drawing.Point(313, 99);
+            this.PreciotextBox.Location = new System.Drawing.Point(306, 130);
             this.PreciotextBox.Name = "PreciotextBox";
             this.PreciotextBox.Size = new System.Drawing.Size(100, 20);
             this.PreciotextBox.TabIndex = 13;
             // 
             // ImporteTextbox
             // 
-            this.ImporteTextbox.Location = new System.Drawing.Point(443, 98);
+            this.ImporteTextbox.Location = new System.Drawing.Point(436, 129);
             this.ImporteTextbox.Name = "ImporteTextbox";
             this.ImporteTextbox.Size = new System.Drawing.Size(100, 20);
             this.ImporteTextbox.TabIndex = 14;
             // 
             // Agregarbutton
             // 
-            this.Agregarbutton.Location = new System.Drawing.Point(610, 98);
+            this.Agregarbutton.Image = global::RegistroDetalle.Properties.Resources.Add_32;
+            this.Agregarbutton.Location = new System.Drawing.Point(603, 101);
             this.Agregarbutton.Name = "Agregarbutton";
-            this.Agregarbutton.Size = new System.Drawing.Size(75, 23);
+            this.Agregarbutton.Size = new System.Drawing.Size(75, 51);
             this.Agregarbutton.TabIndex = 15;
             this.Agregarbutton.Text = "Agregar";
+            this.Agregarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Agregarbutton.UseVisualStyleBackColor = true;
             this.Agregarbutton.Click += new System.EventHandler(this.Agregarbutton_Click);
             // 
             // DetalleCotizacionesdataGridView
             // 
             this.DetalleCotizacionesdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DetalleCotizacionesdataGridView.Location = new System.Drawing.Point(19, 127);
+            this.DetalleCotizacionesdataGridView.Location = new System.Drawing.Point(12, 158);
             this.DetalleCotizacionesdataGridView.Name = "DetalleCotizacionesdataGridView";
             this.DetalleCotizacionesdataGridView.Size = new System.Drawing.Size(666, 201);
             this.DetalleCotizacionesdataGridView.TabIndex = 16;
@@ -191,7 +193,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(16, 377);
+            this.label9.Location = new System.Drawing.Point(4, 465);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(78, 13);
             this.label9.TabIndex = 18;
@@ -199,7 +201,7 @@
             // 
             // observacionesTextbox
             // 
-            this.observacionesTextbox.Location = new System.Drawing.Point(19, 401);
+            this.observacionesTextbox.Location = new System.Drawing.Point(7, 489);
             this.observacionesTextbox.Multiline = true;
             this.observacionesTextbox.Name = "observacionesTextbox";
             this.observacionesTextbox.Size = new System.Drawing.Size(179, 71);
@@ -207,62 +209,70 @@
             // 
             // Guardar2button
             // 
-            this.Guardar2button.Location = new System.Drawing.Point(214, 469);
+            this.Guardar2button.Image = global::RegistroDetalle.Properties.Resources.save_32;
+            this.Guardar2button.Location = new System.Drawing.Point(202, 557);
             this.Guardar2button.Name = "Guardar2button";
             this.Guardar2button.Size = new System.Drawing.Size(86, 50);
             this.Guardar2button.TabIndex = 20;
             this.Guardar2button.Text = "Guardar";
+            this.Guardar2button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Guardar2button.UseVisualStyleBackColor = true;
             this.Guardar2button.Click += new System.EventHandler(this.Guardar2button_Click);
             // 
             // Nuevo2button
             // 
-            this.Nuevo2button.Location = new System.Drawing.Point(327, 469);
+            this.Nuevo2button.Image = global::RegistroDetalle.Properties.Resources.new_32;
+            this.Nuevo2button.Location = new System.Drawing.Point(315, 557);
             this.Nuevo2button.Name = "Nuevo2button";
             this.Nuevo2button.Size = new System.Drawing.Size(86, 50);
             this.Nuevo2button.TabIndex = 21;
             this.Nuevo2button.Text = "Nuevo";
+            this.Nuevo2button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Nuevo2button.UseVisualStyleBackColor = true;
             this.Nuevo2button.Click += new System.EventHandler(this.Nuevo2button_Click);
             // 
             // Eliminarbutton
             // 
-            this.Eliminarbutton.Location = new System.Drawing.Point(448, 469);
+            this.Eliminarbutton.Image = global::RegistroDetalle.Properties.Resources.borrar_32;
+            this.Eliminarbutton.Location = new System.Drawing.Point(436, 557);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(86, 50);
             this.Eliminarbutton.TabIndex = 22;
             this.Eliminarbutton.Text = "Eliminar";
+            this.Eliminarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Eliminarbutton.UseVisualStyleBackColor = true;
             this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
             // PersonacomboBox
             // 
             this.PersonacomboBox.FormattingEnabled = true;
-            this.PersonacomboBox.Location = new System.Drawing.Point(103, 56);
+            this.PersonacomboBox.Location = new System.Drawing.Point(96, 87);
             this.PersonacomboBox.Name = "PersonacomboBox";
             this.PersonacomboBox.Size = new System.Drawing.Size(332, 21);
             this.PersonacomboBox.TabIndex = 23;
             // 
             // Buscarbutton
             // 
-            this.Buscarbutton.Location = new System.Drawing.Point(263, 15);
+            this.Buscarbutton.Image = global::RegistroDetalle.Properties.Resources.buscar;
+            this.Buscarbutton.Location = new System.Drawing.Point(263, 1);
             this.Buscarbutton.Name = "Buscarbutton";
-            this.Buscarbutton.Size = new System.Drawing.Size(75, 23);
+            this.Buscarbutton.Size = new System.Drawing.Size(75, 65);
             this.Buscarbutton.TabIndex = 24;
             this.Buscarbutton.Text = "Buscar";
+            this.Buscarbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Buscarbutton.UseVisualStyleBackColor = true;
             this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
             // 
             // TotaltextBox
             // 
-            this.TotaltextBox.Location = new System.Drawing.Point(649, 386);
+            this.TotaltextBox.Location = new System.Drawing.Point(637, 474);
             this.TotaltextBox.Name = "TotaltextBox";
             this.TotaltextBox.Size = new System.Drawing.Size(100, 20);
             this.TotaltextBox.TabIndex = 25;
             // 
             // CantidadnumericUpDown
             // 
-            this.CantidadnumericUpDown.Location = new System.Drawing.Point(169, 100);
+            this.CantidadnumericUpDown.Location = new System.Drawing.Point(162, 131);
             this.CantidadnumericUpDown.Name = "CantidadnumericUpDown";
             this.CantidadnumericUpDown.Size = new System.Drawing.Size(120, 20);
             this.CantidadnumericUpDown.TabIndex = 26;
@@ -274,11 +284,13 @@
             // 
             // Removerbutton
             // 
-            this.Removerbutton.Location = new System.Drawing.Point(22, 334);
+            this.Removerbutton.Image = global::RegistroDetalle.Properties.Resources.Remover_32;
+            this.Removerbutton.Location = new System.Drawing.Point(12, 365);
             this.Removerbutton.Name = "Removerbutton";
-            this.Removerbutton.Size = new System.Drawing.Size(75, 23);
+            this.Removerbutton.Size = new System.Drawing.Size(103, 60);
             this.Removerbutton.TabIndex = 27;
             this.Removerbutton.Text = "Remover";
+            this.Removerbutton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.Removerbutton.UseVisualStyleBackColor = true;
             this.Removerbutton.Click += new System.EventHandler(this.Removerbutton_Click);
             // 
@@ -286,7 +298,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 531);
+            this.BackgroundImage = global::RegistroDetalle.Properties.Resources.Fondo;
+            this.ClientSize = new System.Drawing.Size(800, 607);
             this.Controls.Add(this.Removerbutton);
             this.Controls.Add(this.CantidadnumericUpDown);
             this.Controls.Add(this.TotaltextBox);

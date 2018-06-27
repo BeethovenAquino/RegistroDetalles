@@ -1,8 +1,7 @@
-create database CotizacionDb
+create database CotizacioneDb
 GO
-USE CotizacionDb
-GO
-create table Articulo
+Use CotizacioneDb
+Create table Articulos
 (	
 	ArticuloID int primary key identity(1,1),
 	Descripcion varchar(max),

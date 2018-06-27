@@ -33,11 +33,11 @@
             this.HastadateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.DesdedateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.ConsulPersonasdataGridView = new System.Windows.Forms.DataGridView();
-            this.Buscar1button = new System.Windows.Forms.Button();
             this.CriteriotextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.FiltrarcomboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.Buscar1button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ConsulPersonasdataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,18 +84,6 @@
             this.ConsulPersonasdataGridView.Size = new System.Drawing.Size(616, 308);
             this.ConsulPersonasdataGridView.TabIndex = 15;
             // 
-            // Buscar1button
-            // 
-            this.Buscar1button.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Buscar1button.Location = new System.Drawing.Point(684, 11);
-            this.Buscar1button.Name = "Buscar1button";
-            this.Buscar1button.Size = new System.Drawing.Size(75, 67);
-            this.Buscar1button.TabIndex = 14;
-            this.Buscar1button.Text = "Buscar";
-            this.Buscar1button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.Buscar1button.UseVisualStyleBackColor = true;
-            this.Buscar1button.Click += new System.EventHandler(this.Buscar1button_Click);
-            // 
             // CriteriotextBox
             // 
             this.CriteriotextBox.Location = new System.Drawing.Point(374, 22);
@@ -138,10 +126,24 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Filtro";
             // 
+            // Buscar1button
+            // 
+            this.Buscar1button.Image = global::RegistroDetalle.Properties.Resources.buscar;
+            this.Buscar1button.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Buscar1button.Location = new System.Drawing.Point(684, 11);
+            this.Buscar1button.Name = "Buscar1button";
+            this.Buscar1button.Size = new System.Drawing.Size(75, 67);
+            this.Buscar1button.TabIndex = 14;
+            this.Buscar1button.Text = "Buscar";
+            this.Buscar1button.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.Buscar1button.UseVisualStyleBackColor = true;
+            this.Buscar1button.Click += new System.EventHandler(this.Buscar1button_Click);
+            // 
             // ConsulPersona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::RegistroDetalle.Properties.Resources.Fondo;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
