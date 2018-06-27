@@ -327,6 +327,7 @@
             this.Controls.Add(this.label1);
             this.Name = "RegisCotizaciones";
             this.Text = "RegisCotizaciones";
+            this.Load += new System.EventHandler(this.RegisCotizaciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.CotizacioIDnumericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DetalleCotizacionesdataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CantidadnumericUpDown)).EndInit();

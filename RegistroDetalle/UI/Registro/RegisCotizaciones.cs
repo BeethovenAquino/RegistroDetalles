@@ -18,6 +18,8 @@ namespace RegistroDetalle.UI.Registro
         public RegisCotizaciones()
         {
             InitializeComponent();
+            LlenarComboBox();
+            
 
         }
         private int ToInt(object valor)
@@ -94,9 +96,12 @@ namespace RegistroDetalle.UI.Registro
             cotizacionArticulos.CotizacionId = Convert.ToInt32(CotizacioIDnumericUpDown.Value);
             cotizacionArticulos.Fecha = Fecha2dateTimePicker.Value;
             cotizacionArticulos.Observaciones = observacionesTextbox.Text;
+            
+            
 
 
-          
+
+
             foreach (DataGridViewRow item in DetalleCotizacionesdataGridView.Rows)
             {
 
@@ -118,12 +123,26 @@ namespace RegistroDetalle.UI.Registro
             return cotizacionArticulos;
         }
 
+        private void LlenarComboBox()
+        {
+            Repositorio<Persona> repositorio = new Repositorio<Persona>(new Contexto());
+            Repositorio<Articulos> repositori = new Repositorio<Articulos>(new Contexto());
+            PersonacomboBox.DataSource = repositorio.GetList(c => true);
+            PersonacomboBox.ValueMember = "PersonaId";
+            PersonacomboBox.DisplayMember = "Nombres";
+
+            ArticulocomboBox.DataSource = repositori.GetList(c => true);
+            ArticulocomboBox.ValueMember = "ArticuloId";
+            ArticulocomboBox.DisplayMember = "Descripcion";
+        }
+
         private void LlenarCampos(Cotizaciones cotizacionArticulos)
         {
             importe = 0;
             CotizacioIDnumericUpDown.Value = cotizacionArticulos.CotizacionId;
             Fecha2dateTimePicker.Value = cotizacionArticulos.Fecha;
             observacionesTextbox.Text = cotizacionArticulos.Observaciones;
+           
 
             foreach (var item in cotizacionArticulos.Detalle)
             {
@@ -322,6 +341,11 @@ namespace RegistroDetalle.UI.Registro
                 DetalleCotizacionesdataGridView.DataSource = null;
                 DetalleCotizacionesdataGridView.DataSource = detalle;
             }
+        }
+
+        private void RegisCotizaciones_Load(object sender, EventArgs e)
+        {
+            PreciotextBox.Text = "0";
         }
     }
     }
