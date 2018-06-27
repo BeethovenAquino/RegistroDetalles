@@ -11,6 +11,7 @@ namespace RegistroDetalle.Entidades
         [Key]
 
         public int ArticuloID { get; set; }
+        public string Nombre { get; set; }
         public string Descripcion { get; set; }
         public int Precio { get; set; }
         public int CantidadCotizada { get; set; }

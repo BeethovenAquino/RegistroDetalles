@@ -7,7 +7,7 @@ using System.Text;
 
 namespace RegistroDetalle.Entidades
 {
-  public  class DetalleCotizacion
+  public class DetalleCotizacion
     {
         [Key]
         public int ID { get; set; }
@@ -17,6 +17,7 @@ namespace RegistroDetalle.Entidades
         public int Cantidad { get; set; }
         public int Precio { get; set; }
         public int Importe { get; set; }
+        public string Descripcion { get; set; }
 
         [ForeignKey("ArticuloID")]
         public virtual Articulos Articulos { get; set; }
@@ -31,13 +32,14 @@ namespace RegistroDetalle.Entidades
 
         }
 
-        public DetalleCotizacion(int id, int cotizacioId, int personaId, int articuloId, int cantidad, int precio, int importe)
+        public DetalleCotizacion(int id, int cotizacioId, int personaId, int articuloId, int cantidad,string descripcion, int precio, int importe)
         {
             ID = id;
             CotizacionID = cotizacioId;
             PersonaID = personaId;
             ArticuloID = articuloId;
             Cantidad = cantidad;
+            Descripcion = Descripcion;
             Precio = precio;
             Importe = importe;
         }

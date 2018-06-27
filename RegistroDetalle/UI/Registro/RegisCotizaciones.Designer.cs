@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,21 +40,25 @@
             this.CotizacioIDnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.Fecha2dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.ArticulocomboBox = new System.Windows.Forms.ComboBox();
-            this.CantidadtextBox = new System.Windows.Forms.TextBox();
             this.PreciotextBox = new System.Windows.Forms.TextBox();
             this.ImporteTextbox = new System.Windows.Forms.TextBox();
             this.Agregarbutton = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.DetalleCotizacionesdataGridView = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
             this.observacionesTextbox = new System.Windows.Forms.TextBox();
             this.Guardar2button = new System.Windows.Forms.Button();
             this.Nuevo2button = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.PersonacomboBox = new System.Windows.Forms.ComboBox();
+            this.Buscarbutton = new System.Windows.Forms.Button();
+            this.TotaltextBox = new System.Windows.Forms.TextBox();
+            this.CantidadnumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.ValidarerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Removerbutton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.CotizacioIDnumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DetalleCotizacionesdataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CantidadnumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ValidarerrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -149,13 +154,7 @@
             this.ArticulocomboBox.Name = "ArticulocomboBox";
             this.ArticulocomboBox.Size = new System.Drawing.Size(121, 21);
             this.ArticulocomboBox.TabIndex = 11;
-            // 
-            // CantidadtextBox
-            // 
-            this.CantidadtextBox.Location = new System.Drawing.Point(185, 98);
-            this.CantidadtextBox.Name = "CantidadtextBox";
-            this.CantidadtextBox.Size = new System.Drawing.Size(100, 20);
-            this.CantidadtextBox.TabIndex = 12;
+            this.ArticulocomboBox.SelectedIndexChanged += new System.EventHandler(this.ArticulocomboBox_SelectedIndexChanged);
             // 
             // PreciotextBox
             // 
@@ -179,26 +178,20 @@
             this.Agregarbutton.TabIndex = 15;
             this.Agregarbutton.Text = "Agregar";
             this.Agregarbutton.UseVisualStyleBackColor = true;
+            this.Agregarbutton.Click += new System.EventHandler(this.Agregarbutton_Click);
             // 
-            // dataGridView1
+            // DetalleCotizacionesdataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 127);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(666, 201);
-            this.dataGridView1.TabIndex = 16;
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Location = new System.Drawing.Point(649, 379);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown2.TabIndex = 17;
+            this.DetalleCotizacionesdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DetalleCotizacionesdataGridView.Location = new System.Drawing.Point(19, 127);
+            this.DetalleCotizacionesdataGridView.Name = "DetalleCotizacionesdataGridView";
+            this.DetalleCotizacionesdataGridView.Size = new System.Drawing.Size(666, 201);
+            this.DetalleCotizacionesdataGridView.TabIndex = 16;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(19, 355);
+            this.label9.Location = new System.Drawing.Point(16, 377);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(78, 13);
             this.label9.TabIndex = 18;
@@ -206,7 +199,7 @@
             // 
             // observacionesTextbox
             // 
-            this.observacionesTextbox.Location = new System.Drawing.Point(22, 379);
+            this.observacionesTextbox.Location = new System.Drawing.Point(19, 401);
             this.observacionesTextbox.Multiline = true;
             this.observacionesTextbox.Name = "observacionesTextbox";
             this.observacionesTextbox.Size = new System.Drawing.Size(179, 71);
@@ -220,7 +213,7 @@
             this.Guardar2button.TabIndex = 20;
             this.Guardar2button.Text = "Guardar";
             this.Guardar2button.UseVisualStyleBackColor = true;
-            
+            this.Guardar2button.Click += new System.EventHandler(this.Guardar2button_Click);
             // 
             // Nuevo2button
             // 
@@ -230,6 +223,7 @@
             this.Nuevo2button.TabIndex = 21;
             this.Nuevo2button.Text = "Nuevo";
             this.Nuevo2button.UseVisualStyleBackColor = true;
+            this.Nuevo2button.Click += new System.EventHandler(this.Nuevo2button_Click);
             // 
             // Eliminarbutton
             // 
@@ -239,6 +233,7 @@
             this.Eliminarbutton.TabIndex = 22;
             this.Eliminarbutton.Text = "Eliminar";
             this.Eliminarbutton.UseVisualStyleBackColor = true;
+            this.Eliminarbutton.Click += new System.EventHandler(this.Eliminarbutton_Click);
             // 
             // PersonacomboBox
             // 
@@ -248,23 +243,64 @@
             this.PersonacomboBox.Size = new System.Drawing.Size(332, 21);
             this.PersonacomboBox.TabIndex = 23;
             // 
+            // Buscarbutton
+            // 
+            this.Buscarbutton.Location = new System.Drawing.Point(263, 15);
+            this.Buscarbutton.Name = "Buscarbutton";
+            this.Buscarbutton.Size = new System.Drawing.Size(75, 23);
+            this.Buscarbutton.TabIndex = 24;
+            this.Buscarbutton.Text = "Buscar";
+            this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
+            // 
+            // TotaltextBox
+            // 
+            this.TotaltextBox.Location = new System.Drawing.Point(649, 386);
+            this.TotaltextBox.Name = "TotaltextBox";
+            this.TotaltextBox.Size = new System.Drawing.Size(100, 20);
+            this.TotaltextBox.TabIndex = 25;
+            // 
+            // CantidadnumericUpDown
+            // 
+            this.CantidadnumericUpDown.Location = new System.Drawing.Point(169, 100);
+            this.CantidadnumericUpDown.Name = "CantidadnumericUpDown";
+            this.CantidadnumericUpDown.Size = new System.Drawing.Size(120, 20);
+            this.CantidadnumericUpDown.TabIndex = 26;
+            this.CantidadnumericUpDown.ValueChanged += new System.EventHandler(this.CantidadnumericUpDown_ValueChanged);
+            // 
+            // ValidarerrorProvider
+            // 
+            this.ValidarerrorProvider.ContainerControl = this;
+            // 
+            // Removerbutton
+            // 
+            this.Removerbutton.Location = new System.Drawing.Point(22, 334);
+            this.Removerbutton.Name = "Removerbutton";
+            this.Removerbutton.Size = new System.Drawing.Size(75, 23);
+            this.Removerbutton.TabIndex = 27;
+            this.Removerbutton.Text = "Remover";
+            this.Removerbutton.UseVisualStyleBackColor = true;
+            this.Removerbutton.Click += new System.EventHandler(this.Removerbutton_Click);
+            // 
             // RegisCotizaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 531);
+            this.Controls.Add(this.Removerbutton);
+            this.Controls.Add(this.CantidadnumericUpDown);
+            this.Controls.Add(this.TotaltextBox);
+            this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.PersonacomboBox);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Nuevo2button);
             this.Controls.Add(this.Guardar2button);
             this.Controls.Add(this.observacionesTextbox);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.DetalleCotizacionesdataGridView);
             this.Controls.Add(this.Agregarbutton);
             this.Controls.Add(this.ImporteTextbox);
             this.Controls.Add(this.PreciotextBox);
-            this.Controls.Add(this.CantidadtextBox);
             this.Controls.Add(this.ArticulocomboBox);
             this.Controls.Add(this.Fecha2dateTimePicker);
             this.Controls.Add(this.CotizacioIDnumericUpDown);
@@ -279,8 +315,9 @@
             this.Name = "RegisCotizaciones";
             this.Text = "RegisCotizaciones";
             ((System.ComponentModel.ISupportInitialize)(this.CotizacioIDnumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DetalleCotizacionesdataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CantidadnumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ValidarerrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -299,17 +336,20 @@
         private System.Windows.Forms.NumericUpDown CotizacioIDnumericUpDown;
         private System.Windows.Forms.DateTimePicker Fecha2dateTimePicker;
         private System.Windows.Forms.ComboBox ArticulocomboBox;
-        private System.Windows.Forms.TextBox CantidadtextBox;
         private System.Windows.Forms.TextBox PreciotextBox;
         private System.Windows.Forms.TextBox ImporteTextbox;
         private System.Windows.Forms.Button Agregarbutton;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.DataGridView DetalleCotizacionesdataGridView;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox observacionesTextbox;
         private System.Windows.Forms.Button Guardar2button;
         private System.Windows.Forms.Button Nuevo2button;
         private System.Windows.Forms.Button Eliminarbutton;
         private System.Windows.Forms.ComboBox PersonacomboBox;
+        private System.Windows.Forms.Button Buscarbutton;
+        private System.Windows.Forms.TextBox TotaltextBox;
+        private System.Windows.Forms.NumericUpDown CantidadnumericUpDown;
+        private System.Windows.Forms.ErrorProvider ValidarerrorProvider;
+        private System.Windows.Forms.Button Removerbutton;
     }
 }

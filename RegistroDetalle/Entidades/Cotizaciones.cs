@@ -12,7 +12,7 @@ namespace RegistroDetalle.Entidades
         public int CotizacionId { get; set; }
         public DateTime Fecha { get; set; }
         [StringLength(100)]
-        public string Comentario { get; set; }
+        public string Observaciones { get; set; }
         public int Monto { get; set; }
 
         public virtual ICollection<DetalleCotizacion> Detalle { get; set; }
@@ -23,9 +23,9 @@ namespace RegistroDetalle.Entidades
             this.Detalle = new List<DetalleCotizacion>();
         }
 
-        public void AgregarDetalle(int id, int CotizacionId, int PersonaId, int ArticuloId, int Cantidad, int Precio, int Importe)
+        public void AgregarDetalle(int id, int CotizacionId, int PersonaId, int ArticuloId, int Cantidad,string Descripcion, int Precio, int Importe)
         {
-            this.Detalle.Add(new DetalleCotizacion(id, CotizacionId, PersonaId, ArticuloId, Cantidad, Precio, Importe));
+            this.Detalle.Add(new DetalleCotizacion(id, CotizacionId, PersonaId, ArticuloId, Cantidad,Descripcion, Precio, Importe));
         }
         
     }

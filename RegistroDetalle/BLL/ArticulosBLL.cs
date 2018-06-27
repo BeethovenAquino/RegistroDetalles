@@ -116,6 +116,18 @@ namespace RegistroDetalle.BLL
             }
             return articulos;
         }
+
+        public static string RetornarDescripcion(string nombre)
+        {
+            string descripcion = string.Empty;
+            var lista = GetList(x => x.Nombre.Equals(nombre));
+            foreach (var item in lista)
+            {
+                descripcion = item.Descripcion;
+            }
+
+            return descripcion;
+        }
     }
 }
 

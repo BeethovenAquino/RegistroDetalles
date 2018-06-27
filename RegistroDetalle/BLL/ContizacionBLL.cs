@@ -154,5 +154,10 @@ namespace RegistroDetalle.BLL
             return Cotizaciones;
         }
 
+        public static decimal CalcularImporte(decimal precio, int cantidad)
+        {
+            return Convert.ToDecimal(precio) * Convert.ToInt32(cantidad);
+        }
+
     }
 }
